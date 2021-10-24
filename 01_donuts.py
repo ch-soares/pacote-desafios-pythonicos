@@ -10,8 +10,9 @@ e donuts(23) retorna 'Number of donuts: many'
 """
 
 def donuts(count):
-    # +++ SUA SOLUÇÃO +++
-    return
+    limitador = 10
+    return 'Number of donuts: many' if count >= limitador else f'Number of donuts: {count}'
+
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
