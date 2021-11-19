@@ -11,8 +11,17 @@ Finalmente, dadas duas strings a e b, retorne uma string na forma:
 a-frente + b-frente + a-trás + b-trás
 """
 def front_back(a, b):
-    # +++ SUA SOLUÇÃO +++
-    return
+    import math
+
+    # identificando os índices dos ínicios da primeira metade, usando o método math a fim de arredondar o número para cima
+    primeira_metade_a = math.ceil(len(a) / 2)
+    primeira_metade_b = math.ceil(len(b) / 2)
+
+    # identificando os índices da segunda metade de cada string
+    segunda_metade_a = - (len(a) // 2)
+    segunda_metade_b = - (len(b) // 2)
+
+    return ''.join((a[:primeira_metade_a], b[:primeira_metade_b], a[segunda_metade_a:], b[segunda_metade_b:]))
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
