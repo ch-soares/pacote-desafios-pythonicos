@@ -12,8 +12,14 @@ antes de combina-las.
 """
 
 def front_x(words):
-    # +++ SUA SOLUÇÃO +++
-    return
+    lista_com_x = []
+    lista_sem_x = []
+    for indice, valor in enumerate(words):
+        if words[indice][0] == 'x':
+            lista_com_x.append(valor)
+        else:
+            lista_sem_x.append(valor)
+    return sorted(lista_com_x) + sorted(lista_sem_x)
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
